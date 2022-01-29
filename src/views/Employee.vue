@@ -1,10 +1,16 @@
 <template>
   <div class="relative md:flex md:flex-row-reverse w-full md:px-7.5 md:h-full">
-    <div class="md:w-1/2 lg:w-5/12 md:pl-7.5 md:border-l border-indigo-300 w-full md:flex flex-col h-full justify-between pt-5 md:pb-6">
+    <div
+      class="md:w-1/2 lg:w-5/12 md:pl-7.5 md:border-l border-indigo-300 w-full md:flex flex-col h-full justify-between pt-5 md:pb-6"
+    >
       <div class="p-6 bg-white rounded-xl shadow-md lg:px-7.5">
         <div class="flex items-center">
           <div class="w-15 lg:w-17.5 flex-shrink-0 pr-5 lg:pr-0">
-            <img src="@/assets/img/avatar.png" class="w-10 h-10 lg:w-11 lg:h-11" alt="" />
+            <img
+              src="@/assets/img/avatar.png"
+              class="w-10 h-10 lg:w-11 lg:h-11"
+              alt=""
+            />
           </div>
           <h2 class="font-extrabold text-lg leading-22">
             Иванов Иван <br class="md:hidden" />
@@ -12,7 +18,9 @@
           </h2>
         </div>
         <div class="mt-3 pb-10 border-b border-indigo-300 mb-5">
-          <div class="flex items-center min-h-11.5 py-1 border-b border-indigo-300">
+          <div
+            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+          >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -28,9 +36,13 @@
                 />
               </svg>
             </div>
-            <p class="text-sm leading-snug lg:text-base leading-22">27.11.1988</p>
+            <p class="text-sm leading-snug lg:text-base leading-22">
+              27.11.1988
+            </p>
           </div>
-          <div class="flex items-center min-h-11.5 py-1 border-b border-indigo-300">
+          <div
+            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+          >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -46,9 +58,13 @@
                 />
               </svg>
             </div>
-            <p class="text-sm leading-snug lg:text-base leading-22">Накладчик станков с ЧПУ</p>
+            <p class="text-sm leading-snug lg:text-base leading-22">
+              Накладчик станков с ЧПУ
+            </p>
           </div>
-          <div class="flex items-center min-h-11.5 py-1 border-b border-indigo-300">
+          <div
+            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+          >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -64,9 +80,13 @@
                 />
               </svg>
             </div>
-            <p class="text-sm leading-snug lg:text-base leading-22">+ 7 999 000 00 00</p>
+            <p class="text-sm leading-snug lg:text-base leading-22">
+              + 7 999 000 00 00
+            </p>
           </div>
-          <div class="flex items-center min-h-11.5 py-1 border-b border-indigo-300">
+          <div
+            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+          >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -82,9 +102,13 @@
                 />
               </svg>
             </div>
-            <p class="text-sm leading-snug lg:text-base leading-22">pochta@mail.ru</p>
+            <p class="text-sm leading-snug lg:text-base leading-22">
+              pochta@mail.ru
+            </p>
           </div>
-          <div class="flex items-center min-h-11.5 py-1 border-b border-indigo-300">
+          <div
+            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+          >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -100,9 +124,13 @@
                 />
               </svg>
             </div>
-            <p class="text-sm leading-snug lg:text-base leading-22">МАИ им. Цилковского</p>
+            <p class="text-sm leading-snug lg:text-base leading-22">
+              МАИ им. Цилковского
+            </p>
           </div>
-          <div class="flex items-center min-h-11.5 py-1 border-b border-indigo-300">
+          <div
+            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+          >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -123,7 +151,9 @@
                 />
               </svg>
             </div>
-            <p class="text-sm leading-snug lg:text-base leading-22">г. Москва</p>
+            <p class="text-sm leading-snug lg:text-base leading-22">
+              г. Москва
+            </p>
           </div>
           <div class="flex items-center min-h-11.5 py-1 border-indigo-300">
             <div
@@ -167,7 +197,9 @@
                 />
               </svg>
             </div>
-            <p class="text-sm leading-snug lg:text-base leading-22">СТХF10 eco</p>
+            <p class="text-sm leading-snug lg:text-base leading-22">
+              СТХF10 eco
+            </p>
           </div>
           <div class="flex items-center mt-2.5">
             <div
@@ -209,7 +241,9 @@
                 />
               </svg>
             </div>
-            <p class="text-sm leading-snug lg:text-base leading-22">OkumaVTR100</p>
+            <p class="text-sm leading-snug lg:text-base leading-22">
+              OkumaVTR100
+            </p>
           </div>
         </div>
       </div>
@@ -218,7 +252,9 @@
           class="rounded-xl shadow-md bg-violet-800 shadow-sm rounded-lg text-white p-6 relative font-bold text-sm lg:text-base leading-snug lg:leading-22 relative"
         >
           Пройти онлайн SkillTest для подбора курса повышения кваливикации
-          <button class="w-9 h-9 border-2 border-white rounded-full absolute top-1/2 bg-violet-800 transform -translate-y-1/2 left-full -translate-x-1/2 flex flex-col items-center justify-center">
+          <button
+            class="w-9 h-9 border-2 border-white rounded-full absolute top-1/2 bg-violet-800 transform -translate-y-1/2 left-full -translate-x-1/2 flex flex-col items-center justify-center"
+          >
             <svg
               class="fill-current h-3"
               xmlns="http://www.w3.org/2000/svg"
@@ -234,52 +270,99 @@
         </div>
       </div>
     </div>
-    <div class="md:w-1/2 lg:w-7/12 md:pr-2 md:mr-7.5 pt-5 md:pb-6 md:overflow-auto scrollbar scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent scrollbar-thumb-rounded-md">
+    <div
+      class="md:w-1/2 lg:w-7/12 md:pr-2 md:mr-7.5 pt-5 md:pb-6 md:overflow-auto scrollbar scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent scrollbar-thumb-rounded-md"
+    >
       <div class="">
         <div class="p-6 bg-white rounded-xl shadow-md">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
         <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at dolore enim fugiat laborum officia repudiandae, similique voluptatem! Dolorem earum enim eum facilis optio provident quaerat quis recusandae sed ullam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
+          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
+          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
+          sed ullam!
         </div>
       </div>
     </div>
