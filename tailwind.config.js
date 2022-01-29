@@ -5,26 +5,47 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
+        3.5: "0.875rem",
         4.5: "1.125rem",
         5.5: "1.375rem",
         6.5: "1.625rem",
         7.5: "1.875rem",
         11.5: "2.875rem",
+        12.5: "3.125rem",
         13: "3.25rem",
         15: "3.75rem",
         17.5: "3.375rem",
+        23.5: "5.875rem",
         25: "6.25rem",
         38: "9.5rem",
         57.5: "14.375rem",
       },
+      minHeight: {
+        11.5: "2.875rem",
+      },
+      borderRadius: {
+        xl: "10px",
+      },
       fontFamily: {
         sans: "Nunito, Arial, sans-serif",
+      },
+      lineHeight: {
+        19: "19px",
+        22: "22px",
+      },
+      boxShadow: {
+        sm: "1px 1px 50px #F3F3F3",
+        md: "box-shadow: 1px 1px 30px rgba(89, 80, 148, 0.1);",
       },
       fontSize: {
         15: "15px",
       },
       colors: {
+        sky: {
+          200: "#F2F7FE",
+        },
         gray: {
+          300: "#AEB7CE",
           500: "#656565",
           700: "#383549",
         },
@@ -43,6 +64,7 @@ module.exports = {
   },
   variants: {
     extend: {},
+    scrollbar: ["rounded"],
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };
