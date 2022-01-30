@@ -12,6 +12,9 @@
             display: block !important;
         }
     }
+    .text-vertical {
+        writing-mode: vertical-lr;
+    }
 }
 
 @layer components {
