@@ -342,28 +342,55 @@
           </div>
         </div>
       </div>
-      <div class="mt-10 pb-20 md:pb-8">
+      <div class="mt-10 pb-20 lg:pb-0">
         <div class="flex px-6 lg:px-0 items-center justify-between">
           <h2 class="font-bold text-xl">Новости</h2>
           <div class="flex items-center gap-4">
-            <button @click="prevSlide" class="hove:bg-indigo-400 w-8 h-8 flex flex-col items-center justify-center text-white border-2 border-white bg-indigo-200 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-2.5" viewBox="0 0 7 12">
-                <path fill-rule="evenodd" d="M6.243 11.004a.829.829 0 0 1-1.172 0L.65 6.585a.829.829 0 0 1 0-1.171l4.42-4.42a.829.829 0 0 1 1.172 1.172L2.41 6l3.833 3.834a.829.829 0 0 1 0 1.171Z" clip-rule="evenodd"/>
+            <button
+              @click="prevSlide"
+              class="hove:bg-indigo-400 w-8 h-8 flex flex-col items-center justify-center text-white border-2 border-white bg-indigo-200 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current h-2.5"
+                viewBox="0 0 7 12"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.243 11.004a.829.829 0 0 1-1.172 0L.65 6.585a.829.829 0 0 1 0-1.171l4.42-4.42a.829.829 0 0 1 1.172 1.172L2.41 6l3.833 3.834a.829.829 0 0 1 0 1.171Z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </button>
             <div class="font-bold text-lg">
-              {{currentSlide}}/<span class="text-gray-300">4</span>
+              {{ currentSlide }}/<span class="text-gray-300">4</span>
             </div>
-            <button @click="nextSlide" class="hove:bg-indigo-400 w-8 h-8 flex flex-col items-center justify-center text-white border-2 border-white bg-indigo-200 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-2.5 transform rotate-180" viewBox="0 0 7 12">
-                <path fill-rule="evenodd" d="M6.243 11.004a.829.829 0 0 1-1.172 0L.65 6.585a.829.829 0 0 1 0-1.171l4.42-4.42a.829.829 0 0 1 1.172 1.172L2.41 6l3.833 3.834a.829.829 0 0 1 0 1.171Z" clip-rule="evenodd"/>
+            <button
+              @click="nextSlide"
+              class="hove:bg-indigo-400 w-8 h-8 flex flex-col items-center justify-center text-white border-2 border-white bg-indigo-200 rounded-full"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="fill-current h-2.5 transform rotate-180"
+                viewBox="0 0 7 12"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.243 11.004a.829.829 0 0 1-1.172 0L.65 6.585a.829.829 0 0 1 0-1.171l4.42-4.42a.829.829 0 0 1 1.172 1.172L2.41 6l3.833 3.834a.829.829 0 0 1 0 1.171Z"
+                  clip-rule="evenodd"
+                />
               </svg>
             </button>
           </div>
         </div>
-        <Splide :options="splideOptions" class="mt-4" ref="splide" @splide:move="handleSlideMove">
+        <Splide
+          :options="splideOptions"
+          class="mt-4"
+          ref="splide"
+          @splide:move="handleSlideMove"
+        >
           <SplideSlide v-for="slide in slides" :key="slide.id">
-            <img :src="slide.src" alt="">
+            <img :src="slide.src" alt="" />
           </SplideSlide>
         </Splide>
       </div>
@@ -374,7 +401,7 @@
 <script>
 import Tabs from "@/components/Tabs";
 import ResponsiveTable from "@/components/ResponsiveTable";
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
 
 export default {
   name: "Home",
@@ -498,50 +525,52 @@ export default {
       ],
       currentSlide: 1,
       splideOptions: {
-        type: 'loop',
+        type: "loop",
         arrows: false,
-        padding: '45px',
-        gap: '10px',
-        fixedWidth: '250px',
+        pagination: false,
+        gap: "10px",
+        fixedWidth: "auto",
+        perPage: 3,
         breakpoints: {
           1024: {
-            fixedWidth: 'auto',
+            fixedWidth: "250px",
+            padding: "45px",
             perPage: 3,
-            padding: '0px',
+            pagination: true,
           },
-        }
+        },
       },
       slides: [
         {
           src: "https://api.lorem.space/image/movie?w=250&h=400",
-          id: 1
+          id: 1,
         },
         {
           src: "https://api.lorem.space/image/movie?w=250&h=400",
-          id: 2
+          id: 2,
         },
         {
           src: "https://api.lorem.space/image/movie?w=250&h=400",
-          id: 3
+          id: 3,
         },
         {
           src: "https://api.lorem.space/image/movie?w=250&h=400",
-          id: 4
-        }
-      ]
+          id: 4,
+        },
+      ],
     };
   },
 
   methods: {
     nextSlide() {
-      this.$refs.splide.go('>')
+      this.$refs.splide.go(">");
     },
     prevSlide() {
-      this.$refs.splide.go('<')
+      this.$refs.splide.go("<");
     },
-    handleSlideMove( splide, nextIndex ) {
-      this.currentSlide = nextIndex + 1
-    }
-  }
+    handleSlideMove(splide, nextIndex) {
+      this.currentSlide = nextIndex + 1;
+    },
+  },
 };
 </script>
