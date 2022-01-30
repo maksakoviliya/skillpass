@@ -342,7 +342,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-10 pb-20">
+      <div class="mt-10 pb-20 md:pb-8">
         <div class="flex px-6 items-center justify-between">
           <h2 class="font-bold text-xl">Новости</h2>
           <div class="flex items-center gap-4">
@@ -502,7 +502,14 @@ export default {
         arrows: false,
         padding: '45px',
         gap: '10px',
-        fixedWidth: '250px'
+        fixedWidth: '250px',
+        breakpoints: {
+          1024: {
+            fixedWidth: 'auto',
+            perPage: 3,
+            padding: '0px',
+          },
+        }
       },
       slides: [
         {
