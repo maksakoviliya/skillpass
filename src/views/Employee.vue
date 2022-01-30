@@ -343,7 +343,7 @@
         </div>
       </div>
       <div class="mt-10 pb-20 md:pb-8">
-        <div class="flex px-6 items-center justify-between">
+        <div class="flex px-6 lg:px-0 items-center justify-between">
           <h2 class="font-bold text-xl">Новости</h2>
           <div class="flex items-center gap-4">
             <button @click="prevSlide" class="hove:bg-indigo-400 w-8 h-8 flex flex-col items-center justify-center text-white border-2 border-white bg-indigo-200 rounded-full">
