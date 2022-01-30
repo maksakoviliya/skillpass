@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-indigo-200 py-2.5 flex justify-between px-6 relative lg:fixed lg:h-screen lg:flex-col lg:px-6.5 lg:py-6.5 z-30"
+    class="bg-indigo-200 py-2.5 flex justify-between px-6 relative lg:fixed lg:inset-y-0 lg:max-h-100vh lg:flex-col lg:px-6.5 lg:py-6.5 z-30 lg:justify-start"
     :class="wideMenu ? 'lg:w-57.5' : 'lg:w-25'"
   >
     <button
@@ -68,7 +68,7 @@
     </button>
     <transition name="slide-right">
       <div
-        class="absolute mobile-menu bg-white inset-x-0 px-6 w-full top-full bg-white z-10 lg:block-important lg:relative lg:top-0 lg:bg-transparent lg:px-0"
+        class="absolute bg-white inset-x-0 px-6 w-full top-full bg-white z-10 lg:block-important lg:relative lg:inset-0 h-full lg:bg-transparent lg:px-0"
         v-show="showMenu"
       >
         <div

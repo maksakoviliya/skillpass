@@ -1,9 +1,13 @@
 <template>
-  <div class="relative md:flex md:flex-row-reverse w-full md:px-7.5 md:h-full">
+  <div
+    class="relative md:flex md:flex-row-reverse w-full md:px-7.5 md:h-full md:pb-13 lg:pb-0"
+  >
     <div
-      class="md:w-1/2 lg:w-5/12 md:pl-7.5 md:border-l border-indigo-300 w-full md:flex flex-col h-full justify-between pt-5 md:pb-6"
+      class="md:w-1/2 xl:w-full xl:max-w-486 lg:w-5/12 md:pl-7.5 md:border-l border-indigo-300 w-full md:flex flex-col h-full justify-between pt-5 md:pb-6"
     >
-      <div class="p-6 bg-white rounded-xl shadow-md lg:px-7.5">
+      <div
+        class="p-6 bg-white rounded-xl shadow-md lg:px-7.5 md:mb-6 md:overflow-auto custom-scroll"
+      >
         <div class="flex items-center">
           <div class="w-15 lg:w-17.5 flex-shrink-0 pr-5 lg:pr-0">
             <img
@@ -271,106 +275,266 @@
       </div>
     </div>
     <div
-      class="md:w-1/2 lg:w-7/12 md:pr-2 md:mr-7.5 pt-5 md:pb-6 md:overflow-auto scrollbar scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent scrollbar-thumb-rounded-md"
+      class="md:w-1/2 xl:w-full lg:w-7/12 md:pr-2 md:mr-7.5 pt-5 md:pb-6 md:overflow-auto custom-scroll"
     >
-      <div class="">
-        <div class="p-6 bg-white rounded-xl shadow-md">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
+      <div class="bg-white rounded-xl shadow-md">
+        <tabs></tabs>
+      </div>
+      <div class="xl:flex gap-6">
+        <div
+          class="p-6 bg-white rounded-xl shadow-md mt-6 flex-1 flex flex-col justify-between"
+        >
+          <div
+            class="border-b border-indigo-300 pt-2.5 pb-7.5 mb-3.5 lg:border-0 lg:p-0 lg:mb-10"
+          >
+            <h2 class="text-lg font-bold text-center">Пройденные курсы</h2>
+          </div>
+          <responsive-table :rows="courses"></responsive-table>
+          <div class="text-center mt-auto">
+            <button
+              class="inline-flex gap-2 items-center mx-auto font-semibold text-sm lg:pt-7.5"
+            >
+              Показать еще
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                class="stroke-current w-2.5"
+                viewBox="0 0 12 6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5 4 5-4"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
+        <div
+          class="p-6 bg-white rounded-xl shadow-md mt-6 flex-1 flex flex-col justify-between"
+        >
+          <div
+            class="border-b border-indigo-300 pt-2.5 pb-7.5 mb-3.5 lg:border-0 lg:p-0 lg:mb-10"
+          >
+            <h2 class="text-lg font-bold text-center">Рекомендованные курсы</h2>
+          </div>
+          <responsive-table :rows="recommendedCourses"></responsive-table>
+          <div class="text-center mt-auto">
+            <button
+              class="inline-flex gap-2 items-center mx-auto font-semibold text-sm lg:pt-7.5"
+            >
+              Показать еще
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                class="stroke-current w-2.5"
+                viewBox="0 0 12 6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5 4 5-4"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
+      </div>
+      <div class="mt-10 pb-20">
+        <div class="flex px-6 items-center justify-between">
+          <h2 class="font-bold text-xl">Новости</h2>
+          <div class="flex items-center gap-4">
+            <button @click="prevSlide" class="hove:bg-indigo-400 w-8 h-8 flex flex-col items-center justify-center text-white border-2 border-white bg-indigo-200 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-2.5" viewBox="0 0 7 12">
+                <path fill-rule="evenodd" d="M6.243 11.004a.829.829 0 0 1-1.172 0L.65 6.585a.829.829 0 0 1 0-1.171l4.42-4.42a.829.829 0 0 1 1.172 1.172L2.41 6l3.833 3.834a.829.829 0 0 1 0 1.171Z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <div class="font-bold text-lg">
+              {{currentSlide}}/<span class="text-gray-300">4</span>
+            </div>
+            <button @click="nextSlide" class="hove:bg-indigo-400 w-8 h-8 flex flex-col items-center justify-center text-white border-2 border-white bg-indigo-200 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-2.5 transform rotate-180" viewBox="0 0 7 12">
+                <path fill-rule="evenodd" d="M6.243 11.004a.829.829 0 0 1-1.172 0L.65 6.585a.829.829 0 0 1 0-1.171l4.42-4.42a.829.829 0 0 1 1.172 1.172L2.41 6l3.833 3.834a.829.829 0 0 1 0 1.171Z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at
-          dolore enim fugiat laborum officia repudiandae, similique voluptatem!
-          Dolorem earum enim eum facilis optio provident quaerat quis recusandae
-          sed ullam!
-        </div>
+        <Splide :options="splideOptions" class="mt-4" ref="splide" @splide:move="handleSlideMove">
+          <SplideSlide v-for="slide in slides" :key="slide.id">
+            <img :src="slide.src" alt="">
+          </SplideSlide>
+        </Splide>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Tabs from "@/components/Tabs";
+import ResponsiveTable from "@/components/ResponsiveTable";
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+
 export default {
   name: "Home",
+
+  components: {
+    Tabs,
+    ResponsiveTable,
+    Splide,
+    SplideSlide,
+  },
+
+  data() {
+    return {
+      courses: [
+        {
+          id: 1,
+          columns: [
+            {
+              key: "visual",
+              label: "Mastering",
+              value: "10",
+            },
+            {
+              key: "date",
+              label: "Date",
+              value: "12/12/20-18/12/20",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "training_center",
+              label: "Training center",
+              value: "dmg mori rus",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 1,
+          columns: [
+            {
+              key: "visual",
+              label: "Mastering",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "date",
+              label: "Date",
+              value: "12/12/20-18/12/20",
+            },
+            {
+              key: "training_center",
+              label: "Training center",
+              value: "dmg mori rus",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+      ],
+      recommendedCourses: [
+        {
+          id: 1,
+          columns: [
+            {
+              key: "visual",
+              label: "Relevance",
+              value: "10",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 1,
+          columns: [
+            {
+              key: "visual",
+              label: "Relevance",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+      ],
+      currentSlide: 1,
+      splideOptions: {
+        type: 'loop',
+        arrows: false,
+        padding: '45px',
+        gap: '10px',
+        fixedWidth: '250px'
+      },
+      slides: [
+        {
+          src: "https://api.lorem.space/image/movie?w=250&h=400",
+          id: 1
+        },
+        {
+          src: "https://api.lorem.space/image/movie?w=250&h=400",
+          id: 2
+        },
+        {
+          src: "https://api.lorem.space/image/movie?w=250&h=400",
+          id: 3
+        },
+        {
+          src: "https://api.lorem.space/image/movie?w=250&h=400",
+          id: 4
+        }
+      ]
+    };
+  },
+
+  methods: {
+    nextSlide() {
+      this.$refs.splide.go('>')
+    },
+    prevSlide() {
+      this.$refs.splide.go('<')
+    },
+    handleSlideMove( splide, nextIndex ) {
+      this.currentSlide = nextIndex + 1
+    }
+  }
 };
 </script>

@@ -23,6 +23,12 @@ module.exports = {
       minHeight: {
         11.5: "2.875rem",
       },
+      maxWidth: {
+        486: "486px",
+      },
+      maxHeight: {
+        "100vh": "100vh",
+      },
       borderRadius: {
         xl: "10px",
       },
@@ -43,9 +49,11 @@ module.exports = {
       colors: {
         sky: {
           200: "#F2F7FE",
+          250: "#F2F8FF",
         },
         gray: {
           300: "#AEB7CE",
+          400: "#C3C7D1",
           500: "#656565",
           700: "#383549",
         },
@@ -54,6 +62,7 @@ module.exports = {
           300: "#DCE2F1",
         },
         violet: {
+          400: "#C9C4EC",
           800: "#51459D",
         },
       },
@@ -63,7 +72,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderRadius: ["first", "last"],
+      borderWidth: ["first", "last"],
+      padding: ["first", "last"],
+    },
     scrollbar: ["rounded"],
   },
   plugins: [require("tailwind-scrollbar")],
