@@ -68,7 +68,7 @@
     </button>
     <transition name="slide-right">
       <div
-        class="absolute bg-white inset-x-0 px-6 w-full top-full bg-white z-10 lg:block-important lg:relative lg:inset-0 h-full lg:bg-transparent lg:px-0"
+        class="absolute bg-white inset-x-0 px-6 w-full top-full bg-white z-10 lg:block-important lg:relative lg:inset-0 h-screen overflow-hidden lg:bg-transparent lg:px-0"
         v-show="showMenu"
       >
         <div

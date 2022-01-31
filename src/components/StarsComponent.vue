@@ -38,7 +38,7 @@
               backgroundColor: generateBgColor(colors[i]),
             }"
           >
-            <span class="absolute top-0 transform left-1/2 -translate-x-1/2 -translate-y-full text-sm font-semibold flex items-center">
+            <span class="absolute top-0 transform left-0 -translate-y-full text-sm font-semibold flex items-center">
               <svg
                 class="stroke-current h-3"
                 xmlns="http://www.w3.org/2000/svg"
