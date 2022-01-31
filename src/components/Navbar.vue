@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-indigo-200 py-2.5 flex justify-between px-6 relative lg:fixed lg:inset-y-0 lg:max-h-100vh lg:flex-col lg:px-6.5 lg:py-6.5 z-30 lg:justify-start"
+    class="bg-indigo-200 py-2.5 flex justify-between px-6 fixed w-full lg:inset-y-0 lg:max-h-100vh lg:flex-col lg:px-6.5 lg:py-6.5 z-30 lg:justify-start"
     :class="wideMenu ? 'lg:w-57.5' : 'lg:w-25'"
   >
     <button

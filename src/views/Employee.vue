@@ -3,7 +3,7 @@
     class="relative md:flex md:flex-row-reverse w-full md:px-7.5 md:h-full md:pb-13 lg:pb-0"
   >
     <div
-      class="md:w-1/2 xl:w-full xl:max-w-486 lg:w-5/12 md:pl-7.5 md:border-l border-indigo-300 w-full md:flex flex-col h-full justify-between pt-5 md:pb-6"
+      class="md:w-1/2 xl:w-full xl:max-w-486 lg:w-full lg:max-w-md md:pl-7.5 md:border-l border-indigo-300 w-full md:flex flex-col h-full justify-between pt-5 md:pb-6"
     >
       <div
         class="p-6 bg-white rounded-xl shadow-md lg:px-7.5 md:mb-6 md:overflow-auto custom-scroll"
@@ -275,14 +275,14 @@
       </div>
     </div>
     <div
-      class="md:w-1/2 xl:w-full lg:w-7/12 md:pr-2 md:mr-7.5 pt-5 md:pb-6 md:overflow-auto custom-scroll"
+      class="md:w-1/2 xl:w-full lg:w-full md:pr-2 md:mr-7.5 pt-5 md:pb-6 md:overflow-auto custom-scroll"
     >
       <div class="bg-white rounded-xl shadow-md">
         <tabs></tabs>
       </div>
       <div class="xl:flex gap-6">
         <div
-          class="p-6 bg-white rounded-xl shadow-md mt-6 flex-1 flex flex-col justify-between"
+          class="p-6 bg-white rounded-xl shadow-md mt-6 flex-1 flex flex-col justify-between overflow-auto"
         >
           <div
             class="border-b border-indigo-300 pt-2.5 pb-7.5 mb-3.5 lg:border-0 lg:p-0 lg:mb-10"
@@ -312,7 +312,7 @@
           </div>
         </div>
         <div
-          class="p-6 bg-white rounded-xl shadow-md mt-6 flex-1 flex flex-col justify-between"
+          class="p-6 bg-white rounded-xl shadow-md mt-6 flex-1 flex flex-col justify-between overflow-auto"
         >
           <div
             class="border-b border-indigo-300 pt-2.5 pb-7.5 mb-3.5 lg:border-0 lg:p-0 lg:mb-10"
