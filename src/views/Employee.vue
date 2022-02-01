@@ -16,14 +16,14 @@
               alt=""
             />
           </div>
-          <h2 class="font-extrabold text-lg leading-22">
+          <h2 class="font-extrabold lg:text-lg leading-22">
             Иванов Иван <br class="md:hidden" />
             Иванович
           </h2>
         </div>
         <div class="mt-3 pb-10 border-b border-indigo-300 mb-5">
           <div
-            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+            class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-b border-indigo-300"
           >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
@@ -45,7 +45,7 @@
             </p>
           </div>
           <div
-            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+            class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-b border-indigo-300"
           >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
@@ -67,7 +67,7 @@
             </p>
           </div>
           <div
-            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+            class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-b border-indigo-300"
           >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
@@ -89,7 +89,7 @@
             </p>
           </div>
           <div
-            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+            class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-b border-indigo-300"
           >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
@@ -111,7 +111,7 @@
             </p>
           </div>
           <div
-            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+            class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-b border-indigo-300"
           >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
@@ -133,7 +133,7 @@
             </p>
           </div>
           <div
-            class="flex items-center min-h-11.5 py-1 border-b border-indigo-300"
+            class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-b border-indigo-300"
           >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
@@ -159,7 +159,7 @@
               г. Москва
             </p>
           </div>
-          <div class="flex items-center min-h-11.5 py-1 border-indigo-300">
+          <div class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-indigo-300">
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -205,7 +205,7 @@
               СТХF10 eco
             </p>
           </div>
-          <div class="flex items-center mt-2.5">
+          <div class="flex items-center mt-2">
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -226,7 +226,7 @@
             </div>
             <p class="text-sm leading-snug lg:text-base leading-22">DMU50</p>
           </div>
-          <div class="flex items-center mt-2.5">
+          <div class="flex items-center mt-2">
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -275,30 +275,32 @@
       </div>
     </div>
     <div
-      class="md:w-1/2 xl:w-full lg:w-full md:pr-2 md:mr-7.5 pt-5 md:pb-6 md:overflow-auto custom-scroll"
+      class="md:w-1/2 xl:w-full lg:w-full md:pr-2 md:mr-7.5 md:pt-5 md:pb-6 md:overflow-auto md:custom-scroll"
     >
       <div class="bg-white rounded-xl shadow-md">
         <tabs></tabs>
       </div>
-      <div class="xl:flex gap-6">
+      <div class="xl:flex items-start gap-6">
         <div
           class="p-6 bg-white rounded-xl shadow-md mt-6 flex-1 flex flex-col justify-between overflow-auto"
         >
           <div
             class="border-b border-indigo-300 pt-2.5 pb-7.5 mb-3.5 lg:border-0 lg:p-0 lg:mb-10"
           >
-            <h2 class="text-lg font-bold text-center">Пройденные курсы</h2>
+            <h2 class="text-lg font-bold text-center tracking-wide">Пройденные курсы</h2>
           </div>
-          <responsive-table :rows="courses"></responsive-table>
+          <responsive-table :show-all="showAllCourses" :rows="courses"></responsive-table>
           <div class="text-center mt-auto">
             <button
               class="inline-flex gap-2 items-center mx-auto font-semibold text-sm lg:pt-7.5"
+              @click="showAllCourses = !showAllCourses"
             >
-              Показать еще
+              {{ showAllCourses ? 'Скрыть' : 'Показать еще' }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                class="stroke-current w-2.5"
+                class="stroke-current w-2.5 transform"
+                :class="showAllCourses ? 'rotate-180' : ''"
                 viewBox="0 0 12 6"
               >
                 <path
@@ -319,16 +321,18 @@
           >
             <h2 class="text-lg font-bold text-center">Рекомендованные курсы</h2>
           </div>
-          <responsive-table :rows="recommendedCourses"></responsive-table>
+          <responsive-table :show-all="showAllRecommenedCourses" :rows="recommendedCourses"></responsive-table>
           <div class="text-center mt-auto">
             <button
               class="inline-flex gap-2 items-center mx-auto font-semibold text-sm lg:pt-7.5"
+              @click="showAllRecommenedCourses = !showAllRecommenedCourses"
             >
-              Показать еще
+              {{ showAllRecommenedCourses ? 'Скрыть' : 'Показать еще' }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                class="stroke-current w-2.5"
+                class="stroke-current w-2.5 transform"
+                :class="showAllRecommenedCourses ? 'rotate-180' : ''"
                 viewBox="0 0 12 6"
               >
                 <path
@@ -415,6 +419,8 @@ export default {
 
   data() {
     return {
+      showAllCourses: false,
+      showAllRecommenedCourses: false,
       courses: [
         {
           id: 1,
@@ -447,7 +453,135 @@ export default {
           ],
         },
         {
-          id: 1,
+          id: 2,
+          columns: [
+            {
+              key: "visual",
+              label: "Mastering",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "date",
+              label: "Date",
+              value: "12/12/20-18/12/20",
+            },
+            {
+              key: "training_center",
+              label: "Training center",
+              value: "dmg mori rus",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 3,
+          columns: [
+            {
+              key: "visual",
+              label: "Mastering",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "date",
+              label: "Date",
+              value: "12/12/20-18/12/20",
+            },
+            {
+              key: "training_center",
+              label: "Training center",
+              value: "dmg mori rus",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 4,
+          columns: [
+            {
+              key: "visual",
+              label: "Mastering",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "date",
+              label: "Date",
+              value: "12/12/20-18/12/20",
+            },
+            {
+              key: "training_center",
+              label: "Training center",
+              value: "dmg mori rus",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 5,
+          columns: [
+            {
+              key: "visual",
+              label: "Mastering",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "date",
+              label: "Date",
+              value: "12/12/20-18/12/20",
+            },
+            {
+              key: "training_center",
+              label: "Training center",
+              value: "dmg mori rus",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 6,
           columns: [
             {
               key: "visual",
@@ -501,7 +635,95 @@ export default {
           ],
         },
         {
-          id: 1,
+          id: 2,
+          columns: [
+            {
+              key: "visual",
+              label: "Relevance",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 3,
+          columns: [
+            {
+              key: "visual",
+              label: "Relevance",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 4,
+          columns: [
+            {
+              key: "visual",
+              label: "Relevance",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 5,
+          columns: [
+            {
+              key: "visual",
+              label: "Relevance",
+              color: "#F4E281",
+              bgColor: "#FBF5D3",
+              value: "26",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
+            },
+            {
+              key: "duration",
+              label: "Duration",
+              value: "10 часов",
+            },
+          ],
+        },
+        {
+          id: 6,
           columns: [
             {
               key: "visual",

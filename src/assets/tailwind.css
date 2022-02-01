@@ -22,8 +22,10 @@
         @apply flex items-center justify-center flex-col bg-white p-2 rounded-lg hover:bg-violet-800 transition hover:text-white;
     }
 
-    .custom-scroll {
-        @apply scrollbar scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent scrollbar-thumb-rounded-md;
+    @variants responsive {
+        .custom-scroll {
+            @apply scrollbar scrollbar-thin scrollbar-thumb-indigo-300 scrollbar-track-transparent scrollbar-thumb-rounded-md;
+        }
     }
 
     .skills-table {

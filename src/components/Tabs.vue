@@ -5,7 +5,7 @@
         v-for="heading in tabs"
         :key="heading.id"
         @click="current = heading.id"
-        class="border-2 w-full text-base leading-snug border-white py-7 font-bold hover:text-gray-700 transition px-3 last:rounded-tr-xl last:rounded-bl-xl first:rounded-tl-xl first:rounded-br-xl"
+        class="border-2 w-full text-base xl:text-xl leading-tight border-white py-4 md:py-7 font-bold hover:text-gray-700 transition px-3 last:rounded-tr-xl last:rounded-bl-xl first:rounded-tl-xl first:rounded-br-xl"
         :class="
           current === heading.id ? 'bg-white' : 'bg-sky-250  text-gray-400'
         "
@@ -13,7 +13,7 @@
         {{ heading.label }}
       </button>
     </div>
-    <div class="px-6 py-10">
+    <div class="px-6 pt-6 pb-10 md:py-10">
       <transition name="fade" mode="out-in">
         <div class="overflow-x-auto custom-scroll" v-if="current === 1" key="rate">
           <stars-component :data="data"></stars-component>

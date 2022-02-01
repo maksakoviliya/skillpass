@@ -2,7 +2,7 @@
   <div>
     <div class="lg:hidden">
       <div
-          v-for="row in rows"
+          v-for="row in rowsComputes"
           :key="row.id"
           class="border-b border-indigo-300 mb-3.5"
       >
@@ -12,7 +12,7 @@
         <div
             v-for="column in omitColumns(row.columns)"
             :key="column.key"
-            class="mb-3.5"
+            class="mb-2 text-sm md:text-basex"
         >
           <span class="text-gray-500">{{ column.label }}: </span>&nbsp;<span>{{
             column.value
@@ -40,7 +40,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="row in rows" :key="row.id">
+        <tr v-for="row in rowsComputes" :key="row.id">
           <td class="border-r border-indigo-300 last:border-0 px-2.5 first:pl-0 text-left text-sm py-3 leading-snug font-normal"
               v-for="column in row.columns" :key="column.key">
             <template v-if="column.key === 'visual'">
@@ -75,6 +75,19 @@ export default {
     rows: {
       type: Array,
     },
+    showAll: {
+      type: Boolean,
+      default: false,
+    },
+    showCount: {
+      default: 4
+    }
+  },
+
+  computed: {
+    rowsComputes() {
+      return this.rows.slice(0, this.showAll ? this.rows.length : this.showCount)
+    }
   },
 
   methods: {
