@@ -26,9 +26,10 @@
               >
                 Оценка
                 <tooltip>
-                  <template v-slot:button-content="{ click }">
+                  <template v-slot:button-content="{ click, shown }">
                     <button
-                      class="w-5 h-5 flex flex-col items-center justify-center rounded-full border-2 border-violet-800 text-violet-800 hover:bg-violet-800 hover:text-white transition"
+                      class="w-5 h-5 flex flex-col items-center justify-center rounded-full border-2 border-violet-800 hover:bg-violet-800 hover:text-white transition"
+                      :class="shown ? 'bg-violet-800' : 'text-violet-800'"
                       @click="click"
                     >
                       <svg
