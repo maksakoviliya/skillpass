@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
+        1.5: "0.375rem",
         3.5: "0.875rem",
         4.5: "1.125rem",
         5.5: "1.375rem",
@@ -24,6 +25,8 @@ module.exports = {
         50: "12.5rem",
         57.5: "14.375rem",
         90: "22.5rem",
+        158: "158px",
+        170: "170px",
       },
       minHeight: {
         9: "2.25rem",
@@ -34,6 +37,7 @@ module.exports = {
         13.5: "3.375rem",
       },
       maxWidth: {
+        16: "4rem",
         486: "486px",
         583: "583px",
       },
@@ -60,6 +64,7 @@ module.exports = {
       colors: {
         sky: {
           200: "#F2F7FE",
+          300: "#F7F9FC",
           250: "#F2F8FF",
         },
         gray: {
@@ -74,6 +79,7 @@ module.exports = {
         },
         violet: {
           400: "#C9C4EC",
+          500: "#665BA9",
           800: "#51459D",
         },
       },

@@ -10,9 +10,10 @@
           class="pt-6 bg-white rounded-xl shadow-md mt-6 md:mt-0 flex-1 flex flex-col justify-between md:h-full"
         >
           <breadcrumbs :breadcrumbs="breadcrumbs" class="px-6"></breadcrumbs>
-             filter-here
 
-          <div class="mt-7.5 overflow-auto md:h-full custom-scroll">
+          <filter-component class="mt-6 px-6"></filter-component>
+
+          <div class="mt-7.5 overflow-auto border-t xl:border-t-0 md:h-full custom-scroll px-6 xl:px-0">
             <users-table :users="users" @select="handleUsersSelect"></users-table>
           </div>
         </div>
@@ -143,6 +144,7 @@ import ResponsiveTable from "@/components/ResponsiveTable";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import UsersTable from "@/components/UsersTable";
+import FilterComponent from "@/components/FilterComponent";
 
 export default {
   name: "Manager",
@@ -152,6 +154,7 @@ export default {
     Splide,
     SplideSlide,
     Breadcrumbs,
+    FilterComponent,
     UsersTable,
   },
 
