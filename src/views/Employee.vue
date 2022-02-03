@@ -463,14 +463,14 @@ export default {
               value: "26",
             },
             {
-              key: "title",
-              label: "Course name",
-              value: "Поворот плоскости CYKLE800",
-            },
-            {
               key: "date",
               label: "Date",
               value: "12/12/20-18/12/20",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
             },
             {
               key: "training_center",
@@ -495,14 +495,14 @@ export default {
               value: "26",
             },
             {
-              key: "title",
-              label: "Course name",
-              value: "Поворот плоскости CYKLE800",
-            },
-            {
               key: "date",
               label: "Date",
               value: "12/12/20-18/12/20",
+            },
+            {
+              key: "title",
+              label: "Course name",
+              value: "Поворот плоскости CYKLE800",
             },
             {
               key: "training_center",

@@ -13,9 +13,9 @@
         {{ heading.label }}
       </button>
     </div>
-    <div class="px-6 pt-6 pb-10 md:py-10">
+    <div class="px-6 pt-6 pb-10 md:py-10 xl:min-h-360 flex flex-col items-center justify-center">
       <transition name="fade" mode="out-in">
-        <div class="overflow-x-auto custom-scroll" v-if="current === 1" key="rate">
+        <div class="overflow-x-auto custom-scroll w-full" v-if="current === 1" key="rate">
           <stars-component :data="data"></stars-component>
         </div>
         <div class="" v-else key="possibilities">
@@ -25,11 +25,11 @@
                 class="border-r flex items-center gap-2 py-2.5 pr-2 text-sm font-semibold"
               >
                 Оценка
-                <tooltip>
+                <tooltip :content-class="'absolute w-xs bg-indigo-300 py-3.5 px-3 rounded-bl-lg mt-2 rounded-tr-lg'">
                   <template v-slot:button-content="{ click, shown }">
                     <button
                       class="w-5 h-5 flex flex-col items-center justify-center rounded-full border-2 border-violet-800 hover:bg-violet-800 hover:text-white transition"
-                      :class="shown ? 'bg-violet-800' : 'text-violet-800'"
+                      :class="shown ? 'text-white bg-violet-800' : 'text-violet-800'"
                       @click="click"
                     >
                       <svg
@@ -52,7 +52,7 @@
                   <div class="tooltip-content">
                     <div class="flex items-start">
                       <div
-                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1"
+                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1 xl:mt-0.5"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@
                     </div>
                     <div class="flex items-start mt-1">
                       <div
-                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1"
+                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1 xl:mt-0.5"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@
                     </div>
                     <div class="flex items-start mt-1">
                       <div
-                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1"
+                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1 xl:mt-0.5"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +146,7 @@
                     </div>
                     <div class="flex items-start mt-1">
                       <div
-                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1"
+                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1 xl:mt-0.5"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@
                     </div>
                     <div class="flex items-start mt-1">
                       <div
-                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1"
+                        class="w-12 flex flex-shrink-0 items-center gap-1 mt-1 xl:mt-0.5"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -362,7 +362,7 @@ export default {
       tabs: [
         {
           id: 1,
-          label: "Оценка знений по системе SkillPass",
+          label: "Оценка знаний по системе SkillPass",
         },
         {
           id: 2,

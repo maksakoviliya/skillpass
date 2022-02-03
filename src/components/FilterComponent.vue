@@ -65,7 +65,8 @@
           :class="position && position.length ? 'has-values' : ''"
           multiple
           :show-labels="false"
-          placeholder="Проофессия"
+          placeholder="Профессия"
+          :close-on-select="false"
           :searchable="false"
           :options="positions"
         >
@@ -185,12 +186,12 @@
           <input
               type="text"
               placeholder="от 0"
-              class="outline-none pl-2 max-w-16 pr-2 text-sm xl:text-15 text-gray-500 leading-snug w-full placeholder-gray-500 border focus:border-violet-500 transition bg-sky-300 border-indigo-300 rounded-xl h-9"
+              class="outline-none pl-2 max-w-18 pr-2 text-sm xl:text-15 text-gray-500 leading-snug w-full placeholder-gray-500 border focus:border-violet-500 transition bg-sky-300 border-indigo-300 rounded-xl h-9"
           />
           <input
               type="text"
               placeholder="до 100"
-              class="outline-none pl-2 max-w-16 pr-2 text-sm xl:text-15 text-gray-500 leading-snug w-full placeholder-gray-500 border focus:border-violet-500 transition bg-sky-300 border-indigo-300 rounded-xl h-9"
+              class="outline-none pl-2 max-w-18 pr-2 text-sm xl:text-15 text-gray-500 leading-snug w-full placeholder-gray-500 border focus:border-violet-500 transition bg-sky-300 border-indigo-300 rounded-xl h-9"
           />
         </div>
         <label

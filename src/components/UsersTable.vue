@@ -4,7 +4,9 @@
       <div
         v-for="user in users"
         :key="user.id"
-        class="mt-5 border-b border-indigo-300"
+        class="pt-5 border-b border-indigo-300 -ml-6 pl-6 -mr-6 pr-6"
+        :class="selected.includes(user.id) ? 'bg-indigo-50' : ''"
+        @click="toggleSelected(user.id)"
       >
         <div class="flex items-center gap-4">
           <img
@@ -32,13 +34,13 @@
         <thead class="border-b border-indigo-300">
           <tr>
             <th
-              class="border-r border-indigo-300 last:border-0 px-2.5 first:pl-0 text-left pb-3 text-sm leading-snug font-normal font-bold"
+              class="border-r border-indigo-300 last:border-0 px-2.5 first:pl-0 text-left pb-3 text-sm xl:text-base leading-snug font-normal font-bold"
               v-for="heading in columns"
               :key="heading.key"
             >
               <div class="flex gap-2" v-if="heading.key === 'rating'">
                 {{ heading.label }}
-                <tooltip content-class="top-full mt-2 right-2 z-10">
+                <tooltip content-class="absolute w-xs bg-indigo-300 py-3.5 px-3 rounded-tl-lg rounded-br-lg top-full mt-2 right-2 z-10">
                   <template v-slot:button-content="{ click, shown }">
                     <button
                       class="w-5 h-5 flex flex-col items-center justify-center rounded-full border-2 border-violet-800 hover:bg-violet-800 hover:text-white transition"
@@ -308,6 +310,16 @@
                   class="w-13.5 h-13.5 block min-w-13.5 object-fill"
                   :alt="user.name"
                 />
+              </template>
+              <template v-else-if="column.key === 'name'">
+                <span class="block xl:w-40">
+                  {{ user[column.key] }}
+                </span>
+              </template>
+              <template v-else-if="column.key === 'position'">
+                <span class="block xl:w-48">
+                  {{ user[column.key] }}
+                </span>
               </template>
               <template v-else-if="column.key === 'rating'">
                 <rating-component

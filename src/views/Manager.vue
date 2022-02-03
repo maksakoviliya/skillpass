@@ -3,11 +3,11 @@
     class="relative md:flex md:flex-row w-full md:px-7.5 md:h-full md:pb-13 lg:pb-0"
   >
     <div
-      class="md:w-1/2 xl:w-full lg:w-full md:pr-2 md:mr-7.5 md:pt-5 md:pb-0 md:h-full"
+      class="md:w-1/2 lg:w-full xl:w-2/3 md:pr-2 md:mr-7.5 md:pt-5 md:pb-0 md:h-full"
     >
-      <div class="xl:flex items-start gap-6 md:h-full">
+      <div class="xl:flex items-start gap-6 md:h-full xl:w-full">
         <div
-          class="pt-6 bg-white rounded-xl shadow-md mt-6 md:mt-0 flex-1 flex flex-col justify-between md:h-full"
+          class="pt-6 bg-white rounded-xl shadow-md mt-6 md:mt-0 flex-1 flex flex-col justify-between md:h-full xl:w-full"
         >
           <breadcrumbs :breadcrumbs="breadcrumbs" class="px-6"></breadcrumbs>
 
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div
-      class="md:w-1/2 xl:w-full xl:max-w-583 lg:w-full lg:max-w-md w-full md:flex flex-col h-full pt-5 md:pb-6  overflow-auto custom-scroll"
+      class="md:w-1/2 lg:w-full xl:w-1/3 xl:max-w-583 lg:max-w-md w-full md:flex flex-col h-full pt-5 md:pb-6  overflow-auto custom-scroll"
     >
       <div class="p-6 bg-white rounded-xl shadow-md lg:px-7.5 md:mb-6">
         <h2 class="text-lg font-bold text-center tracking-wide">
@@ -238,6 +238,26 @@ export default {
               label: "Операции",
               value: 35,
             },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
           ],
         },
         {
@@ -265,6 +285,26 @@ export default {
             },
             {
               key: "key 4",
+              label: "Операции",
+              value: 35,
+            },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
               label: "Операции",
               value: 35,
             },
@@ -298,6 +338,26 @@ export default {
               label: "Операции",
               value: 35,
             },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
           ],
         },
         {
@@ -325,6 +385,26 @@ export default {
             },
             {
               key: "key 4",
+              label: "Операции",
+              value: 35,
+            },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
               label: "Операции",
               value: 35,
             },
@@ -358,6 +438,26 @@ export default {
               label: "Операции",
               value: 35,
             },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
           ],
         },
         {
@@ -388,6 +488,26 @@ export default {
               label: "Операции",
               value: 35,
             },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
           ],
         },
         {
@@ -415,6 +535,276 @@ export default {
             },
             {
               key: "key 4",
+              label: "Операции",
+              value: 35,
+            },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
+          ],
+        },
+        {
+          id: 8,
+          avatar: "no-image.svg",
+          name: "Иванов Иван Иванович",
+          rating: 4,
+          position: "Инженер технолог по программированию станков с ЧПУ",
+          group: "Цех №29",
+          results: [
+            {
+              key: "key 1",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 2",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 3",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 4",
+              label: "Операции",
+              value: 35,
+            },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
+          ],
+        },
+        {
+          id: 9,
+          avatar: "no-image.svg",
+          name: "Иванов Иван Иванович",
+          rating: 4,
+          position: "Инженер технолог по программированию станков с ЧПУ",
+          group: "Цех №29",
+          results: [
+            {
+              key: "key 1",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 2",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 3",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 4",
+              label: "Операции",
+              value: 35,
+            },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
+          ],
+        },
+        {
+          id: 10,
+          avatar: "no-image.svg",
+          name: "Иванов Иван Иванович",
+          rating: 4,
+          position: "Инженер технолог по программированию станков с ЧПУ",
+          group: "Цех №29",
+          results: [
+            {
+              key: "key 1",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 2",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 3",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 4",
+              label: "Операции",
+              value: 35,
+            },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
+          ],
+        },
+        {
+          id: 11,
+          avatar: "no-image.svg",
+          name: "Иванов Иван Иванович",
+          rating: 4,
+          position: "Инженер технолог по программированию станков с ЧПУ",
+          group: "Цех №29",
+          results: [
+            {
+              key: "key 1",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 2",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 3",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 4",
+              label: "Операции",
+              value: 35,
+            },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
+              label: "Операции",
+              value: 35,
+            },
+          ],
+        },
+        {
+          id: 12,
+          avatar: "no-image.svg",
+          name: "Иванов Иван Иванович",
+          rating: 4,
+          position: "Инженер технолог по программированию станков с ЧПУ",
+          group: "Цех №29",
+          results: [
+            {
+              key: "key 1",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 2",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 3",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 4",
+              label: "Операции",
+              value: 35,
+            },
+              {
+              key: "key 12",
+              label: "Технология",
+              value: 72,
+            },
+            {
+              key: "key 22",
+              label: "Операции",
+              value: 22,
+            },
+            {
+              key: "key 32",
+              label: "Операции",
+              value: 90,
+            },
+            {
+              key: "key 42",
               label: "Операции",
               value: 35,
             },

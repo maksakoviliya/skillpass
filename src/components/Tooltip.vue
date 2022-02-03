@@ -4,8 +4,8 @@
     </slot>
 
     <transition name="fade">
-      <div class="absolute w-xs bg-indigo-300 py-3.5 px-3 rounded-tl-lg rounded-br-lg" :class="contentClass" v-if="showTooltip">
-        <button @click="toggleTooltip" class="text-gray-500 hover:text-violet-800 transition block ml-auto">
+      <div :class="contentClass" v-if="showTooltip">
+        <button @click="toggleTooltip" class="text-gray-500 hover:text-violet-800 transition block ml-auto xl:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="stroke-current w-2.5 h-2.5" viewBox="0 0 12 12">
             <path stroke-linecap="round" stroke-width="2" d="M1 11 11 1M11 11 1 1"/>
           </svg>

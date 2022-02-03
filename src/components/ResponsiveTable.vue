@@ -31,18 +31,13 @@
         </div>
       </div>
     </div>
-    <div class="hidden lg:block">
+    <div class="hidden lg:block overflow-auto custom-scroll">
       <table class="w-full">
         <thead class="border-b border-indigo-300">
           <tr>
             <th
               class="border-r border-indigo-300 last:border-0 px-2.5 first:pl-0 text-left pb-3 text-sm leading-snug font-normal"
-              v-for="heading in rows[0].columns.map((item) => {
-                return {
-                  label: item.label,
-                  key: item.key,
-                };
-              })"
+              v-for="heading in headers"
               :key="heading.key"
             >
               {{ heading.label }}
@@ -53,20 +48,10 @@
           <tr v-for="row in rowsComputes" :key="row.id">
             <td
               class="border-r border-indigo-300 last:border-0 px-2.5 first:pl-0 text-left text-sm py-3 leading-snug font-normal"
-              v-for="column in row.columns"
+              v-for="column in headers"
               :key="column.key"
             >
-              <template v-if="column.key === 'visual'">
-                <visual-bar
-                  class="w-full"
-                  :value="column.value"
-                  :color="column.color ?? undefined"
-                  :bg-color="column.bgColor ?? undefined"
-                ></visual-bar>
-              </template>
-              <template v-else>
-                {{ column.value }}
-              </template>
+              <responsive-table-td :value="row.columns.find(item => item.key === column.key)"></responsive-table-td>
             </td>
           </tr>
         </tbody>
@@ -78,12 +63,14 @@
 <script>
 import { omitBy, pickBy } from "lodash";
 import VisualBar from "@/components/VisualBar";
+import ResponsiveTableTd from "@/components/ResponsiveTableTd";
 
 export default {
   name: "ResponsiveTable",
 
   components: {
     VisualBar,
+    ResponsiveTableTd
   },
 
   props: {
@@ -106,6 +93,14 @@ export default {
         this.showAll ? this.rows.length : this.showCount
       );
     },
+    headers() {
+      return this.rows[0].columns.map((item) => {
+        return {
+          label: item.label,
+          key: item.key,
+        };
+      })
+    }
   },
 
   methods: {

@@ -53,6 +53,12 @@
             width: 257px;
         }
     }
+
+    @media (min-width: 1280px) {
+        .tooltip-content {
+            width: 380px;
+        }
+    }
     .hover-row {
         @apply relative;
     }
@@ -74,7 +80,7 @@
 
 .slide-up-enter-active,
 .slide-up-leave-active {
-    @apply transition transform origin-bottom;
+    @apply transition transform origin-bottom duration-300;
 }
 
 .slide-up-enter-from,
