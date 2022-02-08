@@ -67,7 +67,7 @@ module.exports = {
       },
       boxShadow: {
         sm: "1px 1px 50px #F3F3F3",
-        md: "box-shadow: 1px 1px 30px rgba(89, 80, 148, 0.1);",
+        md: "1px 1px 30px rgba(89, 80, 148, 0.1)",
       },
       fontSize: {
         15: "15px",
