@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 239 148">
+    <rect width="232" height="6" x="7" fill="#AEB7CE" rx="3"/>
+    <rect width="232" height="6" x="7" y="12" fill="#AEB7CE" rx="3"/>
+    <rect width="136" height="6" x="7" y="24" fill="#AEB7CE" rx="3"/>
+    <path stroke="#DCE2F1" d="M7 50.447h232M7 58.924h232M7 67.4h232M7 75.878h232M7 103.093h232M7 124.955h232"/>
+    <rect width="13.876" height="88.785" x="18.655" y="50.5" fill="#FDAF53" fill-opacity=".3" rx="6.938"/>
+    <rect width="13.876" height="88.785" x="74.158" y="50.5" fill="#F2DD6C" opacity=".3" rx="6.938"/>
+    <rect width="13.876" height="88.785" x="185.163" y="50.5" fill="#618DFF" opacity=".3" rx="6.938"/>
+    <path stroke="#DCE2F1" d="M7 124.955h232"/>
+    <rect width="13.876" height="70.493" x="18.655" y="68.793" fill="#FDAF53" opacity=".8" rx="6.938"/>
+    <rect width="13.876" height="68.262" x="74.158" y="71.023" fill="#F2DD6C" opacity=".8" rx="6.938"/>
+    <rect width="13.876" height="65.585" x="185.163" y="73.7" fill="#618DFF" opacity=".8" rx="6.938"/>
+    <rect width="13.876" height="88.785" x="46.407" y="50.5" fill="#56A198" opacity=".3" rx="6.938"/>
+    <rect width="13.876" height="45.062" x="46.407" y="94.224" fill="#56A198" opacity=".8" rx="6.938"/>
+    <rect width="13.876" height="88.785" x="101.908" y="50.5" fill="#BEBEBE" opacity=".3" rx="6.938"/>
+    <rect width="13.876" height="24.539" x="101.908" y="114.746" fill="#BEBEBE" opacity=".8" rx="6.938"/>
+    <rect width="13.876" height="88.785" x="129.66" y="50.5" fill="#E07171" opacity=".3" rx="6.938"/>
+    <rect width="13.876" height="48.185" x="129.66" y="91.101" fill="#E07171" opacity=".8" rx="6.938"/>
+    <rect width="13.876" height="88.785" x="157.411" y="50.5" fill="#51459D" opacity=".3" rx="6.938"/>
+    <rect width="13.876" height="45.062" x="157.411" y="94.224" fill="#51459D" opacity=".8" rx="6.938"/>
+    <rect width="13.876" height="88.785" x="212.914" y="50.5" fill="#3459B7" opacity=".3" rx="6.938"/>
+    <rect width="13.876" height="43.277" x="212.914" y="96.008" fill="#3459B7" opacity=".8" rx="6.938"/>
+    <path fill="#AEB7CE" d="M8.54 49.793a1 1 0 0 0-1.414 0L.762 56.157a1 1 0 1 0 1.414 1.414l5.657-5.657 5.657 5.657a1 1 0 0 0 1.414-1.414L8.54 49.793Zm-1.707.707v88.785h2V50.5h-2Z"/>
+    <path fill="#AEB7CE" d="M236.932 140.662a1 1 0 0 0 0-1.414l-6.364-6.364a.999.999 0 1 0-1.414 1.414l5.656 5.657-5.656 5.657a.999.999 0 1 0 1.414 1.414l6.364-6.364Zm-.707-1.707H7v2h229.225v-2Z"/>
+</svg>

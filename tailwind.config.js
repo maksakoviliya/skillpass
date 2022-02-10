@@ -56,13 +56,15 @@ module.exports = {
         486: "486px",
         500: "500px",
         583: "583px",
-        1687: "1687px"
+        930: "930px",
+        1687: "1687px",
       },
       maxHeight: {
         "100vh": "100vh",
       },
       borderRadius: {
         xl: "10px",
+        "2xl": "20px",
       },
       fontFamily: {
         sans: "Nunito, Arial, sans-serif",
