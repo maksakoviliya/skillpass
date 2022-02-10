@@ -13,9 +13,15 @@
         {{ heading.label }}
       </button>
     </div>
-    <div class="px-6 pt-6 pb-10 md:py-10 xl:min-h-360 flex flex-col items-center justify-center">
+    <div
+      class="px-6 pt-6 pb-10 md:py-10 xl:min-h-360 flex flex-col items-center justify-center"
+    >
       <transition name="fade" mode="out-in">
-        <div class="overflow-x-auto custom-scroll w-full" v-if="current === 1" key="rate">
+        <div
+          class="overflow-x-auto custom-scroll w-full"
+          v-if="current === 1"
+          key="rate"
+        >
           <stars-component :data="data"></stars-component>
         </div>
         <div class="" v-else key="possibilities">
@@ -25,11 +31,15 @@
                 class="border-r flex items-center gap-2 py-2.5 pr-2 text-sm font-semibold"
               >
                 Оценка
-                <tooltip :content-class="'absolute w-xs bg-indigo-300 py-3.5 px-3 rounded-bl-lg mt-2 rounded-tr-lg'">
+                <tooltip
+                  :content-class="'absolute w-xs bg-indigo-300 py-3.5 px-3 rounded-bl-lg mt-2 rounded-tr-lg'"
+                >
                   <template v-slot:button-content="{ click, shown }">
                     <button
                       class="w-5 h-5 flex flex-col items-center justify-center rounded-full border-2 border-violet-800 hover:bg-violet-800 hover:text-white transition"
-                      :class="shown ? 'text-white bg-violet-800' : 'text-violet-800'"
+                      :class="
+                        shown ? 'text-white bg-violet-800' : 'text-violet-800'
+                      "
                       @click="click"
                     >
                       <svg
@@ -353,7 +363,7 @@ export default {
   name: "Tabs",
   components: {
     Tooltip,
-    StarsComponent
+    StarsComponent,
   },
 
   data() {

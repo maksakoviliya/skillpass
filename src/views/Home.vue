@@ -546,7 +546,9 @@
         v-if="showingModal"
         @click="hideModal"
       >
-        <div class="bg-white w-full max-w-930 px-10 py-8 rounded-2xl relative lg:px-20 lg:py-15">
+        <div
+          class="bg-white w-full max-w-930 px-10 py-8 rounded-2xl relative lg:px-20 lg:py-15"
+        >
           <button
             class="text-gray-500 absolute top-6 right-6 lg:top-8 lg:right-8"
             @click="hideModal"
@@ -564,7 +566,9 @@
               />
             </svg>
           </button>
-          <h4 class="text-15 leading-tight font-extrabold md:text-xl lg:text-2xl">
+          <h4
+            class="text-15 leading-tight font-extrabold md:text-xl lg:text-2xl"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </h4>
           <div class="lg:flex items-center gap-16">

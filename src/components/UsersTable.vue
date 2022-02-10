@@ -40,7 +40,9 @@
             >
               <div class="flex gap-2" v-if="heading.key === 'rating'">
                 {{ heading.label }}
-                <tooltip content-class="absolute w-xs bg-indigo-300 py-3.5 px-3 rounded-tl-lg rounded-br-lg top-full mt-2 right-2 z-10">
+                <tooltip
+                  content-class="absolute w-xs bg-indigo-300 py-3.5 px-3 rounded-tl-lg rounded-br-lg top-full mt-2 right-2 z-10"
+                >
                   <template v-slot:button-content="{ click, shown }">
                     <button
                       class="w-5 h-5 flex flex-col items-center justify-center rounded-full border-2 border-violet-800 hover:bg-violet-800 hover:text-white transition"
@@ -406,7 +408,7 @@ export default {
       } else {
         this.selected.push(id);
       }
-      this.$emit('select', this.selected)
+      this.$emit("select", this.selected);
     },
   },
 };

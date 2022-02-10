@@ -13,21 +13,26 @@
 
           <filter-component class="mt-6 px-6"></filter-component>
 
-          <div class="mt-7.5 overflow-auto border-t xl:border-t-0 md:h-full custom-scroll px-6 xl:px-0">
-            <users-table :users="users" @select="handleUsersSelect"></users-table>
+          <div
+            class="mt-7.5 overflow-auto border-t xl:border-t-0 md:h-full custom-scroll px-6 xl:px-0"
+          >
+            <users-table
+              :users="users"
+              @select="handleUsersSelect"
+            ></users-table>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="md:w-1/2 lg:w-full xl:w-1/3 xl:max-w-583 lg:max-w-md w-full md:flex flex-col h-full pt-5 md:pb-6  overflow-auto custom-scroll"
+      class="md:w-1/2 lg:w-full xl:w-1/3 xl:max-w-583 lg:max-w-md w-full md:flex flex-col h-full pt-5 md:pb-6 overflow-auto custom-scroll"
     >
       <div class="p-6 bg-white rounded-xl shadow-md lg:px-7.5 md:mb-6">
         <h2 class="text-lg font-bold text-center tracking-wide">
           Рекомендованные курсы
         </h2>
         <div
-            v-if="!selected.length"
+          v-if="!selected.length"
           class="flex w-full h-full flex-col justify-center items-center my-6 xl:my-0 xl:min-h-90 xl:px-16"
         >
           <div
@@ -58,25 +63,28 @@
           </div>
         </div>
         <div v-else>
-          <responsive-table :show-all="showAllRecommenedCourses" :rows="recommendedCourses"></responsive-table>
+          <responsive-table
+            :show-all="showAllRecommenedCourses"
+            :rows="recommendedCourses"
+          ></responsive-table>
           <div class="text-center mt-auto">
             <button
-                class="inline-flex gap-2 items-center mx-auto font-semibold text-sm lg:pt-7.5"
-                @click="showAllRecommenedCourses = !showAllRecommenedCourses"
+              class="inline-flex gap-2 items-center mx-auto font-semibold text-sm lg:pt-7.5"
+              @click="showAllRecommenedCourses = !showAllRecommenedCourses"
             >
-              {{ showAllRecommenedCourses ? 'Скрыть' : 'Показать еще' }}
+              {{ showAllRecommenedCourses ? "Скрыть" : "Показать еще" }}
               <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  class="stroke-current w-2.5 transform"
-                  :class="showAllRecommenedCourses ? 'rotate-180' : ''"
-                  viewBox="0 0 12 6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                class="stroke-current w-2.5 transform"
+                :class="showAllRecommenedCourses ? 'rotate-180' : ''"
+                viewBox="0 0 12 6"
               >
                 <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m1 1 5 4 5-4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 5 4 5-4"
                 />
               </svg>
             </button>
@@ -238,7 +246,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -288,7 +296,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -338,7 +346,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -388,7 +396,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -438,7 +446,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -488,7 +496,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -538,7 +546,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -588,7 +596,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -638,7 +646,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -688,7 +696,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -738,7 +746,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -788,7 +796,7 @@ export default {
               label: "Операции",
               value: 35,
             },
-              {
+            {
               key: "key 12",
               label: "Технология",
               value: 72,
@@ -957,8 +965,8 @@ export default {
       this.currentSlide = nextIndex + 1;
     },
     handleUsersSelect(ids) {
-      this.selected = ids
-    }
+      this.selected = ids;
+    },
   },
 };
 </script>

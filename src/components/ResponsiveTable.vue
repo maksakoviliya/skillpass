@@ -51,7 +51,9 @@
               v-for="column in headers"
               :key="column.key"
             >
-              <responsive-table-td :value="row.columns.find(item => item.key === column.key)"></responsive-table-td>
+              <responsive-table-td
+                :value="row.columns.find((item) => item.key === column.key)"
+              ></responsive-table-td>
             </td>
           </tr>
         </tbody>
@@ -70,7 +72,7 @@ export default {
 
   components: {
     VisualBar,
-    ResponsiveTableTd
+    ResponsiveTableTd,
   },
 
   props: {
@@ -99,8 +101,8 @@ export default {
           label: item.label,
           key: item.key,
         };
-      })
-    }
+      });
+    },
   },
 
   methods: {

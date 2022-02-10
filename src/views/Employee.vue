@@ -159,7 +159,9 @@
               г. Москва
             </p>
           </div>
-          <div class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-indigo-300">
+          <div
+            class="flex items-center min-h-9 lg:min-h-11.5 py-1 border-indigo-300"
+          >
             <div
               class="w-15 lg:w-17.5 flex-shrink-0 flex flex-col items-center justify-center pr-5 lg:pr-4 text-gray-300"
             >
@@ -287,15 +289,20 @@
           <div
             class="border-b border-indigo-300 pt-2.5 pb-7.5 mb-3.5 lg:border-0 lg:p-0 lg:mb-10"
           >
-            <h2 class="text-lg font-bold text-center tracking-wide">Пройденные курсы</h2>
+            <h2 class="text-lg font-bold text-center tracking-wide">
+              Пройденные курсы
+            </h2>
           </div>
-          <responsive-table :show-all="showAllCourses" :rows="courses"></responsive-table>
+          <responsive-table
+            :show-all="showAllCourses"
+            :rows="courses"
+          ></responsive-table>
           <div class="text-center mt-auto">
             <button
               class="inline-flex gap-2 items-center mx-auto font-semibold text-sm lg:pt-7.5"
               @click="showAllCourses = !showAllCourses"
             >
-              {{ showAllCourses ? 'Скрыть' : 'Показать еще' }}
+              {{ showAllCourses ? "Скрыть" : "Показать еще" }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -321,13 +328,16 @@
           >
             <h2 class="text-lg font-bold text-center">Рекомендованные курсы</h2>
           </div>
-          <responsive-table :show-all="showAllRecommenedCourses" :rows="recommendedCourses"></responsive-table>
+          <responsive-table
+            :show-all="showAllRecommenedCourses"
+            :rows="recommendedCourses"
+          ></responsive-table>
           <div class="text-center mt-auto">
             <button
               class="inline-flex gap-2 items-center mx-auto font-semibold text-sm lg:pt-7.5"
               @click="showAllRecommenedCourses = !showAllRecommenedCourses"
             >
-              {{ showAllRecommenedCourses ? 'Скрыть' : 'Показать еще' }}
+              {{ showAllRecommenedCourses ? "Скрыть" : "Показать еще" }}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

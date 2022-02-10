@@ -15,7 +15,9 @@
         class="h-full max-h-2 last:rounded-t-md first:rounded-b-md"
         :style="{
           backgroundColor:
-            item > calculateItems(result.value) ? 'transparent' : `rgb(${colors[i]})`,
+            item > calculateItems(result.value)
+              ? 'transparent'
+              : `rgb(${colors[i]})`,
         }"
       ></div>
       <span
@@ -23,7 +25,10 @@
         >{{ result.value }}</span
       >
       <transition name="fade">
-        <div v-if="hovered !== null && hovered === i" class="absolute bottom-full bg-violet-800 rounded-lg rounded-bl-none text-white text-xs leading-tight font-bold px-3 py-2 mb-2 left-1/2">
+        <div
+          v-if="hovered !== null && hovered === i"
+          class="absolute bottom-full bg-violet-800 rounded-lg rounded-bl-none text-white text-xs leading-tight font-bold px-3 py-2 mb-2 left-1/2"
+        >
           {{ result.label }}
         </div>
       </transition>

@@ -180,44 +180,46 @@
           </svg>
         </button>
       </div>
-      <div class="flex flex-col mt-6 xl:flex-row xl:gap-4 xl:items-center xl:justify-between xl:w-full">
+      <div
+        class="flex flex-col mt-6 xl:flex-row xl:gap-4 xl:items-center xl:justify-between xl:w-full"
+      >
         <div class="flex items-center gap-1">
           <span class="leading-tight">Баллы по компетенции:</span>
           <input
-              type="text"
-              placeholder="от 0"
-              class="outline-none pl-2 max-w-18 pr-2 text-sm xl:text-15 text-gray-500 leading-snug w-full placeholder-gray-500 border focus:border-violet-500 transition bg-sky-300 border-indigo-300 rounded-xl h-9"
+            type="text"
+            placeholder="от 0"
+            class="outline-none pl-2 max-w-18 pr-2 text-sm xl:text-15 text-gray-500 leading-snug w-full placeholder-gray-500 border focus:border-violet-500 transition bg-sky-300 border-indigo-300 rounded-xl h-9"
           />
           <input
-              type="text"
-              placeholder="до 100"
-              class="outline-none pl-2 max-w-18 pr-2 text-sm xl:text-15 text-gray-500 leading-snug w-full placeholder-gray-500 border focus:border-violet-500 transition bg-sky-300 border-indigo-300 rounded-xl h-9"
+            type="text"
+            placeholder="до 100"
+            class="outline-none pl-2 max-w-18 pr-2 text-sm xl:text-15 text-gray-500 leading-snug w-full placeholder-gray-500 border focus:border-violet-500 transition bg-sky-300 border-indigo-300 rounded-xl h-9"
           />
         </div>
         <label
-            class="checkbox group text-15 flex items-start gap-2.5 mt-6 cursor-pointer xl:mt-0 xl:ml-auto"
+          class="checkbox group text-15 flex items-start gap-2.5 mt-6 cursor-pointer xl:mt-0 xl:ml-auto"
         >
           <input type="checkbox" class="hidden" v-model="ignore" />
           <div
-              class="check w-6 h-6 border rounded-sm border-indigo-300 group-hover:border-violet-800 transition flex flex-col items-center justify-center"
-              :class="ignore ? 'bg-violet-800 border-violet-800' : 'bg-sky-300'"
+            class="check w-6 h-6 border rounded-sm border-indigo-300 group-hover:border-violet-800 transition flex flex-col items-center justify-center"
+            :class="ignore ? 'bg-violet-800 border-violet-800' : 'bg-sky-300'"
           >
             <div
-                class="selector flex flex-col items-center justify-center"
-                v-if="ignore"
+              class="selector flex flex-col items-center justify-center"
+              v-if="ignore"
             >
               <svg
-                  fill="none"
-                  class="w-3 h-3"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 15 14"
+                fill="none"
+                class="w-3 h-3"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 15 14"
               >
                 <path
-                    d="m1 7.5 6 5L13.5 1"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                  d="m1 7.5 6 5L13.5 1"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
               </svg>
             </div>
@@ -225,16 +227,16 @@
           Игнорировать если нет данных
         </label>
         <button
-            class="px-4 py-2 bg-indigo-200 rounded-xl mt-4 hover:bg-violet-800 transition hover:text-white text-sm flex items-center justify-center gap-2 w-auto mx-auto xl:m-0"
+          class="px-4 py-2 bg-indigo-200 rounded-xl mt-4 hover:bg-violet-800 transition hover:text-white text-sm flex items-center justify-center gap-2 w-auto mx-auto xl:m-0"
         >
           Сбросить
           <svg
-              class="w-3 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 15 15"
+            class="w-3 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 15 15"
           >
             <path
-                d="M3.435 3.448A5.74 5.74 0 1 1 1.76 7.5a.594.594 0 1 0-1.188 0 6.927 6.927 0 1 0 2.02-4.889.598.598 0 0 0-.054.064l-.996-.996a.396.396 0 0 0-.674.244l-.28 3.08a.396.396 0 0 0 .43.43l3.079-.28a.396.396 0 0 0 .244-.675l-.972-.972a.599.599 0 0 0 .065-.057Z"
+              d="M3.435 3.448A5.74 5.74 0 1 1 1.76 7.5a.594.594 0 1 0-1.188 0 6.927 6.927 0 1 0 2.02-4.889.598.598 0 0 0-.054.064l-.996-.996a.396.396 0 0 0-.674.244l-.28 3.08a.396.396 0 0 0 .43.43l3.079-.28a.396.396 0 0 0 .244-.675l-.972-.972a.599.599 0 0 0 .065-.057Z"
             />
           </svg>
         </button>

@@ -2,7 +2,9 @@
   <div
     class="mt-7.5 relative flex flex-col border-t border-indigo-300 w-full pb-1"
   >
-    <div class="absolute inset-y-0 pb-1 right-0 left-25 xl:left-29 flex gap-6 xl:gap-11.5">
+    <div
+      class="absolute inset-y-0 pb-1 right-0 left-25 xl:left-29 flex gap-6 xl:gap-11.5"
+    >
       <div
         class="h-full rounded-full bg-opacity-40 w-6 flex-shrink-0 text-center relative"
         :style="{ backgroundColor: generateBgColor(colors[i], 0.3) }"
@@ -38,7 +40,9 @@
               backgroundColor: generateBgColor(colors[i]),
             }"
           >
-            <span class="absolute top-0 transform left-0 -translate-y-full text-sm font-semibold flex items-center">
+            <span
+              class="absolute top-0 transform left-0 -translate-y-full text-sm font-semibold flex items-center"
+            >
               <svg
                 class="stroke-current h-3"
                 xmlns="http://www.w3.org/2000/svg"
