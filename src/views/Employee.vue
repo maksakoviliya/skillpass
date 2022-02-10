@@ -408,7 +408,7 @@ import ResponsiveTable from "@/components/ResponsiveTable";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 
 export default {
-  name: "Home",
+  name: "Employee",
 
   components: {
     Tabs,
